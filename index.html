@@ -1,0 +1,29 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="node_modules\swipejs\style.css">
+	</head>
+	<body>
+<div id="slider" class="swipe">
+  <div class="swipe-wrap">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+</div>
+	<script src="node_modules\swipejs\build\swipe.min.js"></script>
+	<script>
+	window.mySwipe = new Swipe(document.getElementById('slider'), {
+  startSlide: 0,
+  speed: 400,
+  auto: 3000,
+  draggable: true,
+  continuous: true,
+  disableScroll: false,
+  stopPropagation: false,
+  ignore: ".scroller",
+  callback: function(index, elem, dir) {},
+  transitionEnd: function(index, elem) {}
+});
+	</script>
+	</body>
+</html>
